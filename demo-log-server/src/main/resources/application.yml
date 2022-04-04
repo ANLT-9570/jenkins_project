@@ -1,0 +1,18 @@
+server:
+  port: 8070
+spring:
+  application:
+    name: log-server
+
+#management:
+#  endpoint:
+#    logfile:
+#      external-file: f:/logs/output.log # demos-client.log
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
